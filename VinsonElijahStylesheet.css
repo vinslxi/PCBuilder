@@ -1,0 +1,273 @@
+body {
+  background-color: SkyBlue;
+  font-family: "Times New Roman", Times, serif;
+  margin: 25px 75px 25px 75px;
+}  
+
+h1 {
+  color: DarkSlateBlue;
+  text-align:center;
+}
+
+p {
+    font-size: 24px;
+}
+
+span.boldtext {
+    font-weight: bold;
+}
+
+span.italictext {
+    font-style: italic;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.menu	{
+   float:	left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align:	center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the linke color to #111 (black) on hover */
+li.menu a:hover {
+  background-color: DarkSlateBlue;
+}
+
+.active {
+  background-color: DarkSlateBlue;
+}
+/* Basic layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1020;
+    color: #f4f4f4;
+}
+
+header {
+    background: #151b35;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #2f3b70;
+}
+
+h1 {
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: #c8d4ff;
+}
+
+/* Navigation */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    background: #222b52;
+    color: #f4f4f4;
+    font-size: 0.95rem;
+}
+
+.nav a:hover {
+    background: #3a4aa2;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 1.5rem auto 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: #181f3a;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.45);
+}
+
+.hero {
+    border-left: 4px solid #4b7cff;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #c0c8ff;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.75rem auto;
+}
+
+figure {
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #c0c8ff;
+}
+
+/* Forms */
+form.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+fieldset {
+    border: 1px solid #2f3b70;
+    border-radius: 4px;
+    padding: 0.75rem 1rem 1rem 1rem;
+}
+
+legend {
+    padding: 0 0.4rem;
+    color: #e0e5ff;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #3a4aa2;
+    background: #101528;
+    color: #f4f4f4;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background: #4b7cff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2f5bff;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    background: #101528;
+}
+
+caption {
+    caption-side: top;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #2f3b70;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+thead {
+    background: #222b52;
+}
+
+tfoot {
+    background: #1b2344;
+}
+
+/* Footer */
+.footer {
+    background: #151b35;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-top: 2px solid #2f3b70;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Computers</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="This is a website explains key computer components, how they work together, and beginner friendly tips for planning and building a PC.">
+		<meta name="keywords" content="computers, PC building, CPU, GPU, RAM, SSD, motherboard, power supply, Elijah Vinson">
+		<meta name="author" content="Elijah Vinson">
+		<meta name="viewport" content="width=device-width, initial-scale.0">
+		<link rel="stylesheet" href="VinsonElijahStylesheet.css">
+   </head>
+   <body>
+		<ul class="menu">
+			<li class="menu"><a href="VinsonElijahHomePage.html">Home</a></li>
+			<li class="menu"><a href="Table.html">Table</a></li>
+			<li style="float:right" class="menu"><a href="About.html">About</a></li>
+			<li class="menu"><a href="Form.html">Form</a></li>
+			<li class="menu"><a href="Marketing.html">Marketing</a></li>
+			<li class="menu"><a href="Userguide.html">Userguide</a></li>
+			<li class="menu active"><a href="Prototype.html">Prototype</a></li>
+		</ul>
+      This prototype demonstrates a simple “PC Builder Helper” that suggests parts based on the user’s budget and primary use (gaming, content creation, or everyday).
+    </p>
+
+    <section class="card">
+      <h2>Goal</h2>
+      <p>
+        Help beginners choose compatible parts quickly, avoid common mistakes, and see an estimated price before buying.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How It Works</h2>
+      <ol>
+        <li>User selects a <strong>budget range</strong> and <strong>use case</strong>.</li>
+        <li>The prototype maps to a pre-vetted parts list (CPU, GPU, RAM, storage, PSU, case).</li>
+        <li>It shows an <strong>estimated total</strong> and links to beginner setup guides.</li>
+      </ol>
+      <p class="muted">Note: This is a front-end demo; no purchases are made.</p>
+    </section>
+
+    <section class="card">
+      <h2>Low-Fidelity UI Sketch</h2>
+      <figure class="figure">
+        <img src="Images/prototype-wireframe.png" alt="Wireframe mockup of the PC Builder Helper form and results" />
+        <figcaption>Wireframe: simple form on the left, recommended build on the right.</figcaption>
+      </figure>
+      <p>If you don’t have an image yet, keep this placeholder and add your own screenshot later.</p>
+    </section>
+
+    <section class="card">
+      <h2>Interactive Demo (HTML-only)</h2>
+      <form id="demoForm" class="stack">
+        <label>Budget
+          <select id="budget">
+            <option value="800">$700–$900</option>
+            <option value="1200">$1,000–$1,400</option>
+            <option value="2000">$1,800–$2,200</option>
+          </select>
+        </label>
+        <label>Primary Use
+          <select id="usecase">
+            <option value="gaming">Gaming</option>
+            <option value="creation">Content Creation</option>
+            <option value="everyday">Everyday</option>
+          </select>
+        </label>
+        <button type="button" onclick="recommend()">Get Recommendation</button>
+      </form>
+
+      <div id="result" class="card" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">&copy; Elijah Vinson — PC Builder Prototype</footer>
+
+  <script>
+    function recommend(){
+      const budget = document.getElementById('budget').value;
+      const use = document.getElementById('usecase').value;
+      const result = document.getElementById('result');
+      // Very simple demo logic
+      let build = {};
+      if(budget==='800' && use==='gaming'){
+        build = {CPU:'Ryzen 5 5600', GPU:'RTX 4060', RAM:'16GB DDR4', Storage:'1TB NVMe', PSU:'600W 80+ Bronze', Case:'Mid-tower'};
+      } else if(budget==='1200' && use==='gaming'){
+        build = {CPU:'Ryzen 5 7600', GPU:'RTX 4070', RAM:'32GB DDR5', Storage:'1TB NVMe', PSU:'750W 80+ Gold', Case:'ATX airflow'};
+      } else if(budget==='2000' && use==='creation'){
+        build = {CPU:'Ryzen 9 7900X', GPU:'RTX 4070 Ti Super', RAM:'64GB DDR5', Storage:'2TB NVMe', PSU:'850W 80+ Gold', Case:'Silent ATX'};
+      } else {
+        build = {CPU:'Ryzen 5 5600G', GPU:'Integrated', RAM:'16GB', Storage:'512GB NVMe', PSU:'500W', Case:'mATX'};
+      }
+      result.innerHTML = `
+        <h3>Suggested Build</h3>
+        <ul class="two-col">
+          ${Object.entries(build).map(([k,v])=>`<li><strong>${k}:</strong> ${v}</li>`).join('')}
+        </ul>
+        <p class="muted">Estimates only—verify compatibility (socket, size, PSU headroom) before buying.</p>`;
+    }
+  </script>
+</body>
+</html>

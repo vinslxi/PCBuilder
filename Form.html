@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Computers</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="This is a website explains key computer components, how they work together, and beginner friendly tips for planning and building a PC.">
+		<meta name="keywords" content="computers, PC building, CPU, GPU, RAM, SSD, motherboard, power supply, Elijah Vinson">
+		<meta name="author" content="Elijah Vinson">
+		<meta name="viewport" content="width=device-width, initial-scale.0">
+		<link rel="stylesheet" href="VinsonElijahStylesheet.css">
+   </head>
+   <body>
+		<ul class="menu">
+			<li class="menu"><a href="VinsonElijahHomePage.html">Home</a></li>
+			<li class="menu"><a href="Table.html">Table</a></li>
+			<li style="float:right" class="menu"><a href="About.html">About</a></li>
+			<li class="menu active"><a href="Form.html">Form</a></li>
+			<li class="menu"><a href="Marketing.html">Marketing</a></li>
+			<li class="menu"><a href="Userguide.html">Userguide</a></li>
+			<li class="menu"><a href="Prototype.html">Prototype</a></li>
+		</ul>
+		
+  <h1>PC Build Interest Form</h1>
+  <p style="text-align:center;">Fill out this form to help me suggest the best computer build for your needs.</p>
+
+  <form action="https://httpbin.org/post" method="post">
+
+    <!-- Textbox -->
+    <fieldset>
+      <legend>Your Information</legend>
+
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname" required><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+    </fieldset>
+
+    <!-- Radio buttons -->
+    <fieldset>
+      <legend>Main Purpose for Your PC (Choose One)</legend>
+      <label><input type="radio" name="purpose" value="Gaming" required> Gaming</label><br>
+      <label><input type="radio" name="purpose" value="Work"> Work/School</label><br>
+      <label><input type="radio" name="purpose" value="Content Creation"> Content Creation</label><br>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Components You Already Own (Select all that apply)</legend>
+      <label><input type="checkbox" name="components" value="CPU"> CPU</label><br>
+      <label><input type="checkbox" name="components" value="GPU"> GPU</label><br>
+      <label><input type="checkbox" name="components" value="RAM"> RAM</label><br>
+      <label><input type="checkbox" name="components" value="Storage"> Storage</label><br>
+      <label><input type="checkbox" name="components" value="Case"> Case</label><br>
+    </fieldset>
+
+    <!-- Select list -->
+    <fieldset>
+      <legend>Budget Range</legend>
+      <label for="budget">Select Your Budget:</label><br>
+      <select id="budget" name="budget">
+        <option value="" selected>--Select a price range--</option>
+        <option value="600-800">$600 - $800</option>
+        <option value="800-1000">$800 - $1,000</option>
+        <option value="1000-1500">$1,000 - $1,500</option>
+        <option value="1500plus">$1,500+</option>
+      </select>
+    </fieldset>
+
+    <!-- Text Area -->
+    <fieldset>
+      <legend>Additional Notes</legend>
+      <label for="notes">Tell me about any specific games, desired RGB lighting, preferred size, or special requests:</label><br>
+      <textarea id="notes" name="notes" rows="6" cols="50" placeholder="Example: I want to play Call of Duty at 1440p with high FPS and quiet cooling."></textarea>
+    </fieldset>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit Form">
+    <input type="reset" value="Reset Form">
+  </form>
+
+  <footer>
+    <p style="text-align:center;">&copy; 2025 Elijah Vinson</p>
+  </footer>
+
+</body>
+</html>
